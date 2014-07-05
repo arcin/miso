@@ -14,3 +14,5 @@ var options = {
   method: 'GET',
   headers: headers
 };
+
+var request = https.request(options, listRepos);
