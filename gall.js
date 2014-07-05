@@ -27,6 +27,9 @@ var listRepos = function(res){
       process.stdout.write(repos[i].name + '\n');
     }
   });
+  res.on('error', function(err){
+    console.error(err);
+  });
 };
 
 var request = https.request(options, listRepos);
