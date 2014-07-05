@@ -21,22 +21,22 @@ var options = {
   headers: headers
 };
 
-var request = https.request(options, function(res){
+var repoCreator = function(res){
   res.setEncoding('utf-8');
   var chunkyString = '';
+
   res.on('data', function(chunk){
     chunkyString += chunk;
   });
-
   res.on('end', function(){
     var finalResponse = JSON.parse(chunkyString);
     exec('git init && git remote add origin '+finalResponse.clone_url);
   });
-
   res.on('error', function(err){
     console.error(err);
   });
-});
+};
 
+var request = https.request(options, repoCreator);
 request.write(jsonData);
 request.end();
