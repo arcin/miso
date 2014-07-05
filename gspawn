@@ -3,17 +3,18 @@ var https = require('https'),
     exec = require('child_process').exec,
     repoName = process.argv[2],
     githubUser = process.env.GITHUB_USERNAME,
-    githubKey = process.env.GITHUB_KEY;
+    githubKey = process.env.GITHUB_KEY,
+    jsonData, headers, options, repoCreator, request;
 
-var jsonData = JSON.stringify({ name: repoName });
+jsonData = JSON.stringify({ name: repoName });
 
-var headers = {
+headers = {
   'User-Agent': 'RepoKit/0.0.1',
   'Content-Type': 'application/json',
   'Content-Length': jsonData.length
 };
 
-var options = {
+options = {
   hostname: 'api.github.com',
   path: '/user/repos',
   method: 'POST',
@@ -21,7 +22,7 @@ var options = {
   headers: headers
 };
 
-var repoCreator = function(res){
+repoCreator = function(res){
   res.setEncoding('utf-8');
   var chunkyString = '';
 
@@ -37,6 +38,6 @@ var repoCreator = function(res){
   });
 };
 
-var request = https.request(options, repoCreator);
+request = https.request(options, repoCreator);
 request.write(jsonData);
 request.end();
