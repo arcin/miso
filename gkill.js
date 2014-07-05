@@ -8,3 +8,10 @@ var headers = {
   'Content-Type': 'text/plain',
   'User-Agent': 'RepoKit/0.0.1'
 };
+var options = {
+  hostname: 'api.github.com',
+  path: '/repos/'+githubUser+'/'+repoName,
+  auth: githubUser+':'+githubKey,
+  method: 'DELETE',
+  headers: headers
+};
