@@ -9,11 +9,11 @@ From the command line Users can:
 
 ## Folder Structure for NPM Release
 
-replaceme
-   - bin
-   --- replaceme.js
-   - lib
-   --- main.js
-   --- replace.js
-   package.json
-   README.md
+    replaceme
+       - bin
+       --- replaceme.js
+       - lib
+       --- main.js
+       --- replace.js
+       package.json
+       README.md
