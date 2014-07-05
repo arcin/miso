@@ -12,3 +12,11 @@ var headers = {
   'Content-Type': 'application/json',
   'Content-Length': jsonData.length
 };
+
+var options = {
+  hostname: 'api.github.com',
+  path: '/user/repos',
+  method: 'POST',
+  auth: githubUser+':'+githubKey,
+  headers: headers
+};
