@@ -15,4 +15,8 @@ var options = {
   headers: headers
 };
 
+var listRepos = function(res){
+  res.setEncoding('utf-8');
+};
+
 var request = https.request(options, listRepos);
