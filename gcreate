@@ -22,9 +22,17 @@ var options = {
 };
 
 var request = https.request(options, function(res){
-  // set encoding
-  // create response container
-  // fill response container
-  // grab and manipulate final response
-  // handle errors
+  res.setEncoding('utf-8');
+  var chunkyString = '';
+  res.on('data', function(chunk){
+    chunkyString += chunk;
+  });
+
+  res.on('end', function(){
+
+  });
+
+  res.on('error', function(err){
+    console.error(err);
+  });
 });
