@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 var https = require('https'),
     githubUser = process.env.GITHUB_USERNAME,
-    githubKey = process.env.GITHUB_KEY;
+    githubKey = process.env.GITHUB_KEY,
+    headers, options, listRepos, request;
 
-var headers = {
+headers = {
   'User-Agent': 'RepoKit/0.0.1'
 };
 
-var options = {
+options = {
   hostname: 'api.github.com',
   path: '/user/repos',
   auth: githubUser+':'+githubKey,
@@ -15,7 +16,7 @@ var options = {
   headers: headers
 };
 
-var listRepos = function(res){
+listRepos = function(res){
   res.setEncoding('utf-8');
   var chunkyString = '';
   res.on('data', function(chunk){
@@ -32,5 +33,5 @@ var listRepos = function(res){
   });
 };
 
-var request = https.request(options, listRepos);
+request = https.request(options, listRepos);
 request.end();
