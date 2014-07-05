@@ -17,6 +17,10 @@ var options = {
 
 var listRepos = function(res){
   res.setEncoding('utf-8');
+  var chunkyString = '';
+  res.on('data', function(chunk){
+    chunkyString += chunk;
+  });
 };
 
 var request = https.request(options, listRepos);
