@@ -7,3 +7,13 @@ From the command line Users can:
   - List all of their repositories.
   - Delete a specific repository.
 
+## Folder Structure for NPM Release
+
+replaceme
+   - bin
+   --- replaceme.js
+   - lib
+   --- main.js
+   --- replace.js
+   package.json
+   README.md
