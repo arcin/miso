@@ -6,3 +6,9 @@ var https = require('https'),
     githubKey = process.env.GITHUB_KEY;
 
 var jsonData = JSON.stringify({ name: repoName });
+
+var headers = {
+  'User-Agent': 'RepoKit/0.0.1',
+  'Content-Type': 'application/json',
+  'Content-Length': jsonData.length
+};
