@@ -21,6 +21,15 @@ var request = https.request(options, function(res){
   res.on('data', function(chunk){
     console.log('Searching for repo...');
   });
+
+  res.on('end', function(){
+    if (res.statusCode === 404) {
+      console.log('Repo "'+repoName+'" does not exist!');
+    }
+    if (res.statusCode === 204) {
+      console.log('"'+repoName+'" repo destroyed.');
+    }
+  });
 });
 
 request.end();
