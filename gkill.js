@@ -18,8 +18,9 @@ var options = {
 
 var request = https.request(options, function(res){
   res.setEncoding('utf-8');
-  var chunkyString = '';
   res.on('data', function(chunk){
-    chunkyString += chunk;
+    console.log('Searching for repo...');
   });
 });
+
+request.end();
