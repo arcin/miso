@@ -2,20 +2,21 @@
 var https = require('https'),
     repoName = process.argv[2],
     githubUser = process.env.GITHUB_USERNAME,
-    githubKey = process.env.GITHUB_KEY;
+    githubKey = process.env.GITHUB_KEY,
+    headers, options, logResults, request;
 
-var headers = {
+headers = {
   'Content-Type': 'text/plain',
   'User-Agent': 'RepoKit/0.0.1'
 };
-var options = {
+options = {
   hostname: 'api.github.com',
   path: '/repos/'+githubUser+'/'+repoName,
   auth: githubUser+':'+githubKey,
   method: 'DELETE',
   headers: headers
 };
-var logResults = function(res){
+logResults = function(res){
   res.setEncoding('utf-8');
   res.on('data', function(chunk){
     console.log('Searching for repo...');
@@ -34,5 +35,5 @@ var logResults = function(res){
     console.error(err);
   });
 };
-var request = https.request(options, logResults);
+request = https.request(options, logResults);
 request.end();
