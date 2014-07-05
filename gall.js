@@ -23,6 +23,9 @@ var listRepos = function(res){
   });
   res.on('end', function(){
     var repos = JSON.parse(chunkyString);
+    for (var i = 0; i < repos.length; i++){
+      process.stdout.write(repos[i] + '\n');
+    }
   });
 };
 
