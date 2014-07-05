@@ -20,3 +20,11 @@ var options = {
   auth: githubUser+':'+githubKey,
   headers: headers
 };
+
+var request = https.request(options, function(res){
+  // set encoding
+  // create response container
+  // fill response container
+  // grab and manipulate final response
+  // handle errors
+});
