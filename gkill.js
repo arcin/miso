@@ -30,6 +30,10 @@ var request = https.request(options, function(res){
       console.log('"'+repoName+'" repo destroyed.');
     }
   });
+
+  res.on('error', function(err){
+    console.error(err);
+  });
 });
 
 request.end();
