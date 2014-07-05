@@ -21,6 +21,9 @@ var listRepos = function(res){
   res.on('data', function(chunk){
     chunkyString += chunk;
   });
+  res.on('end', function(){
+    var repos = JSON.parse(chunkyString);
+  });
 };
 
 var request = https.request(options, listRepos);
