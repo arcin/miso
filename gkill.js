@@ -15,8 +15,7 @@ var options = {
   method: 'DELETE',
   headers: headers
 };
-
-var request = https.request(options, function(res){
+var logResults = function(res){
   res.setEncoding('utf-8');
   res.on('data', function(chunk){
     console.log('Searching for repo...');
@@ -34,6 +33,6 @@ var request = https.request(options, function(res){
   res.on('error', function(err){
     console.error(err);
   });
-});
-
+};
+var request = https.request(options, logResults);
 request.end();
