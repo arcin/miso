@@ -1,0 +1,33 @@
+{
+  "name": "repokit",
+  "version": "0.0.1",
+  "description": "A command line tool to manage your github repos",
+  "main": "index.js",
+  "bin": {
+    "gspawn": "bin/gspawn.js",
+    "gkill": "bin/gkill.js",
+    "gall": "bin/gall.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcin/repokit.git"
+  },
+  "author": "Charles Arciniega",
+  "license": "MIT",
+  "keywords": [
+    "create",
+    "delete",
+    "list",
+    "remote",
+    "repos",
+    "repository",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/arcin/repokit/issues"
+  },
+  "homepage": "https://github.com/arcin/repokit"
+}
