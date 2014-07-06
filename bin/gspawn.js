@@ -32,7 +32,7 @@ repoCreator = function(res){
   res.on('end', function(){
     var finalResponse = JSON.parse(chunkyString);
     exec('git init && git remote add origin '+finalResponse.clone_url);
-    console.log(""+repoName+""+' repo successfully created and connected.');
+    console.log('"'+repoName+'" repo successfully created and connected.');
   });
   res.on('error', function(err){
     console.error(err);
