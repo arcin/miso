@@ -17,6 +17,15 @@
   },
   "author": "Charles Arciniega",
   "license": "MIT",
+  "keywords": [
+    "create",
+    "delete",
+    "list",
+    "remote",
+    "repos",
+    "repository",
+    "cli"
+  ],
   "bugs": {
     "url": "https://github.com/arcin/repokit/issues"
   },
