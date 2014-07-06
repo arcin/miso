@@ -25,7 +25,7 @@ listRepos = function(res){
   res.on('end', function(){
     var repos = JSON.parse(chunkyString);
     for (var i = 0; i < repos.length; i++){
-      console.log(repos[i].name + '\n');
+      console.log(repos[i].name);
     }
   });
   res.on('error', function(err){
