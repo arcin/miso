@@ -1,19 +1,19 @@
-## RepoKit
+# RepoKit
 
-RepoKit uses core Node libraries and the Github API to give developers some simple commandline tools.
+## Before Installation
 
-From the command line Users can:
-  - Create and Connect both remote and local repositories with one command.
-  - List all of their repositories.
-  - Delete a specific repository.
+RepoKit requires a **Github Personal API Token** and a **Github Username** to make changes to the github server.  
 
-## Folder Structure for NPM Release
+### If you have an API token
 
-    replaceme
-       - bin
-       --- replaceme.js
-       - lib
-       --- main.js
-       --- replace.js
-       package.json
-       README.md
+You'll need to store your API token and github username as environment variables.  
+Add the following lines to your .bashrc, .bash_profile, or .zshrc.
+
+```bash
+export GITHUB_USERNAME=your_username
+export GITHUB_TOKEN=your_github_token
+```
+
+### If you don't have an API token.
+
+It's super easy to get one!
