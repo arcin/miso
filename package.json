@@ -4,9 +4,7 @@
   "description": "A command line tool to manage your github repos",
   "main": "index.js",
   "bin": {
-    "gspawn": "bin/gspawn.js",
-    "gkill": "bin/gkill.js",
-    "gall": "bin/gall.js"
+    "miso": "bin/cmd.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
