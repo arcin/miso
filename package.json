@@ -1,6 +1,6 @@
 {
-  "name": "repokit",
-  "version": "0.0.1",
+  "name": "miso",
+  "version": "1.0.1",
   "description": "A command line tool to manage your github repos",
   "main": "index.js",
   "bin": {
