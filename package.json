@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/arcin/repokit/issues"
   },
-  "homepage": "https://github.com/arcin/repokit"
+  "homepage": "https://github.com/arcin/repokit",
+  "dependencies": {
+    "chai": "~1.9.1"
+  }
 }
