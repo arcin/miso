@@ -6,7 +6,7 @@ Miso is a simple [node](http://nodejs.org) wrapper around the Github API (v3). I
 
 ## Usage
 
-### Create
+#### Create
 
     $ miso c repo_name
 
@@ -14,13 +14,13 @@ Miso is a simple [node](http://nodejs.org) wrapper around the Github API (v3). I
   - Create a remote repository.
   - Automatically set the origin of the local repository to point to the remote.
 
-### Destroy
+#### Destroy
 
     $ miso d repo_name
 
   - Destroys a remote repository without confirmation.
 
-### List
+#### List
 
     $ miso l
 
@@ -30,7 +30,7 @@ Miso is a simple [node](http://nodejs.org) wrapper around the Github API (v3). I
 
 Miso requires a **Github Personal API Token** and a **Github Username** to make changes on Github servers.
 
-### If you have an API token
+#### If you have an API token
 
 You'll need to store your API token and github username as environment variables.  
 Add the following lines to your .bashrc, .bash_profile, or .zshrc.
@@ -40,7 +40,7 @@ export GITHUB_USERNAME=your_username
 export GITHUB_TOKEN=your_github_token
 ```
 
-### If you don't have an API token.
+#### If you don't have an API token.
 
 It's super easy to get one! You just need to follow this github guide on getting a [personal token](https://github.com/blog/1509-personal-api-tokens).  
 When setting up your API token, make sure to check off the following options:
