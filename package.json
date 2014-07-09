@@ -7,7 +7,7 @@
     "miso": "bin/cmd.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "url": "https://github.com/arcin/repokit/issues"
   },
   "homepage": "https://github.com/arcin/repokit",
-  "dependencies": {
+  "devDependencies": {
     "chai": "~1.9.1"
   }
 }
