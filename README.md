@@ -28,7 +28,7 @@ Miso is a simple [node](http://nodejs.org) wrapper around the Github API (v3). I
 
 ## Before Installation
 
-Miso requires a **Github Personal API Token** and a **Github Username** to make changes on Github servers.  
+Miso requires a **Github Personal API Token** and a **Github Username** to make changes on Github servers.
 
 ### If you have an API token
 
