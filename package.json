@@ -1,6 +1,6 @@
 {
   "name": "miso",
-  "version": "1.0.1",
+  "version": "0.1.2",
   "description": "A command line tool to manage your github repos",
   "main": "index.js",
   "bin": {
@@ -25,9 +25,9 @@
     "cli"
   ],
   "bugs": {
-    "url": "https://github.com/arcin/repokit/issues"
+    "url": "https://github.com/arcin/miso/issues"
   },
-  "homepage": "https://github.com/arcin/repokit",
+  "homepage": "https://github.com/arcin/miso",
   "devDependencies": {
     "chai": "~1.9.1"
   }
