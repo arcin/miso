@@ -30,5 +30,8 @@
   "homepage": "https://github.com/arcin/miso",
   "devDependencies": {
     "chai": "~1.9.1"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1"
   }
 }
